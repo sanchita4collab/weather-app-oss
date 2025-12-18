@@ -2,7 +2,7 @@
 
 Private repository prepared for open-source compliance for the Weather App project. This repo contains community health files, contribution guidelines, and templates to support a healthy open-source workflow.
 
-- Project homepage: https://github.com/shivam123-dev/weather-app.github.io
+- Project homepage: [https://github.com/shivam123-dev/weather-app.github.io](https://github.com/shivam123-dev/weather-app-oss)
 
 ## Overview
 
