@@ -43,13 +43,6 @@ No build step is required. You can open the site directly:
 Start-Process "$PWD\docs\index.html"
 ```
 
-Optional (if Node.js is installed):
-
-```pwsh
-npx serve -s docs -l 8080
-# Then visit http://localhost:8080
-```
-
 ## How It Works
 
 `docs/js/index.js` calls the OpenWeather endpoint:
@@ -59,18 +52,6 @@ GET https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&uni
 ```
 
 The response is parsed and rendered into elements with IDs `city`, `temp`, and `weather-text` in `index.html`.
-
-## Hide Your API Key (Recommended)
-
-GitHub Pages is static and cannot keep secrets. To avoid exposing your OpenWeather key in client code, use a tiny proxy (e.g., Cloudflare Workers) that stores the key securely and forwards requests.
-
-Steps (Cloudflare Workers):
-- Copy `serverless/cloudflare-worker.js` to a Workers project.
-- Set a secret: `OPENWEATHER_KEY` to your API key.
-- Deploy and note your worker URL, e.g. `https://YOUR_WORKER_SUBDOMAIN.workers.dev`.
-- In `docs/js/index.js`, set `API.proxyUrl` to `https://YOUR_WORKER_SUBDOMAIN.workers.dev/weather`.
-
-The worker adds CORS headers and proxies requests to OpenWeather using your secret key. Your GitHub Pages site continues to work without exposing the key publicly.
 
 ## Security & Privacy Notes
 
