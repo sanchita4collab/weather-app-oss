@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 :root{
     --card-bg: #fff;
     --card-shadow: #53627C;
@@ -78,6 +82,8 @@ body.weather--wind{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
 }
 
 .topbar{
@@ -106,6 +112,11 @@ h1{
 }
 form{
     margin-top: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: end;
 }
 input[type=text]{
     color: white;
@@ -114,7 +125,7 @@ input[type=text]{
     border-bottom: 2px solid white;
     font-size: 1.9rem;
     outline: none;   
-    width: fit-content;   
+    width: min(520px, 85vw);
     margin-top: 4vh;      
 }
 input[type=text]:focus{
@@ -142,9 +153,10 @@ input[type=submit]{
     margin: auto;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
+    margin-top: 6vh;
     background-color: var(--card-bg);
     border-radius: 33px;
+    width: min(560px, 92vw);
     padding: 60px;
     padding-top: 33px;
     font-size: 2.4rem;
@@ -173,4 +185,52 @@ input[type=submit]{
     line-height: 1.35;
     color: var(--quote-color);
     max-width: 34ch;
+}
+
+@media (max-width: 720px){
+    h1{
+        font-size: 2.4rem;
+        margin-bottom: 6px;
+    }
+
+    input[type=text]{
+        font-size: 1.25rem;
+        margin-top: 2vh;
+        width: min(520px, 92vw);
+    }
+
+    input[type=submit]{
+        padding: 10px 12px;
+        width: min(200px, 92vw);
+    }
+
+    .card{
+        margin-top: 4vh;
+        padding: 28px;
+        padding-top: 22px;
+        border-radius: 22px;
+        font-size: 1.7rem;
+    }
+
+    .quote{
+        font-size: 1rem;
+        max-width: 42ch;
+    }
+}
+
+@media (max-width: 420px){
+    .topbar{
+        gap: 10px;
+    }
+
+    .icon-btn{
+        padding: 7px 9px;
+        font-size: 1.05rem;
+    }
+
+    .card{
+        padding: 22px;
+        padding-top: 18px;
+        font-size: 1.55rem;
+    }
 }
