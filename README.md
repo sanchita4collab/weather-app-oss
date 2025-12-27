@@ -15,7 +15,6 @@ Search for a city, and the app shows:
 - City and country
 - Temperature in °C
 - Weather description
-- An AI-style weather quote/tip (Gemini if configured, otherwise local fallback)
 - A dynamic background based on the current condition
 - A dark/light theme toggle (auto by time, manual toggle saved in localStorage)
 
@@ -40,11 +39,7 @@ const API = {
 
 No build step is required. You can open the site directly:
 
-- Double-click `docs/index.html`, or run:
-
-```pwsh
-Start-Process "$PWD\docs\index.html"
-```
+- Double-click `docs/index.html`
 
 ## How It Works
 
