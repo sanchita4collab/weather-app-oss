@@ -19,17 +19,6 @@ Search for a city, and the app shows:
 - A dynamic background based on the current condition
 - A dark/light theme toggle (auto by time, manual toggle saved in localStorage)
 
-## Gemini (AI Quotes)
-
-This demo calls Gemini directly from the browser (client-side).
-
-1) Open `docs/js/index.js`
-2) Set `OPENAI_API_KEY` to your API key
-
-Notes:
-- Client-side API keys are visible to anyone who loads the site.
-- For public deployments, proxy OpenAI through a backend.
-
 ## Requirements
 
 - A modern browser (Chrome, Edge, Firefox, Safari)
