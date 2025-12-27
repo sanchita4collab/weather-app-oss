@@ -53,7 +53,6 @@ The response is parsed and rendered into elements with IDs `city`, `temp`, and `
 
 ## Security & Privacy Notes
 
-- Client-side API keys are visible in the browser. Use a restricted key (e.g., domain/IP restrictions) and avoid sharing sensitive keys publicly.
 - This app only sends requests to OpenWeather and does not store personal data.
 
 ## Troubleshooting
