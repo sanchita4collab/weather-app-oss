@@ -7,6 +7,8 @@ const API = {
 // This key will be visible to anyone who loads your site.
 // For a public deployment, use a backend proxy instead.
 const GEMINI_API_KEY = 'AIzaSyDSEQsmzemj8uunBkjGIn2ae5My8syJoZc';
+// Disable Gemini on GitHub Pages domains to avoid CORS/referrer issues
+const GEMINI_ENABLED = !String(location.hostname).endsWith('github.io') && !!(GEMINI_API_KEY || '').trim();
 
 const STORAGE_KEYS = {
     themePreference: 'weatherApp.themePreference', // 'light' | 'dark' | 'auto'
@@ -112,7 +114,7 @@ async function showReport(weatherData) {
         });
 
         try {
-            const geminiKey = (GEMINI_API_KEY || '').trim();
+            const geminiKey = GEMINI_ENABLED ? (GEMINI_API_KEY || '').trim() : '';
             if (!geminiKey) {
                 quoteElement.textContent = fallbackQuote;
                 return;
@@ -391,8 +393,8 @@ function sanitizeTipAndCloser(text, forbiddenTerms) {
         .replace(/[\r\n]+/g, ' ')
         .replace(/\s+/g, ' ')
         .trim()
-        .replace(/^['"`]+/, '')
-        .replace(/['"`]+$/, '')
+        .replace(/^["'`]+/, '')
+        .replace(/["'`]+$/, '')
         .trim();
 
     // Must be two sentences. Keep first two only.
