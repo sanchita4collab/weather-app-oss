@@ -323,8 +323,8 @@ function seededRng(seedText) {
 }
 
 async function generateGeminiQuote({ apiKey, city, conditionGroup, weatherMain, weatherDesc, tempC, humidity, windMs }) {
-    // Use latest alias to avoid 404 for deprecated model names
-    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${encodeURIComponent(apiKey)}`;
+    // Use stable v1 endpoint; v1beta can 404 for latest aliases
+    const endpoint = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash-latest:generateContent?key=${encodeURIComponent(apiKey)}`;
 
     const tempRounded = (typeof tempC === 'number') ? Math.round(tempC) : null;
     const windRounded = (typeof windMs === 'number') ? Math.round(windMs) : null;
