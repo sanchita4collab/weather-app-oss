@@ -24,11 +24,11 @@ Search for a city, and the app shows:
 This demo calls Gemini directly from the browser (client-side).
 
 1) Open `docs/js/index.js`
-2) Set `GEMINI_API_KEY` to your API key
+2) Set `OPENAI_API_KEY` to your API key
 
 Notes:
 - Client-side API keys are visible to anyone who loads the site.
-- For public deployments, proxy Gemini through a backend.
+- For public deployments, proxy OpenAI through a backend.
 
 ## Requirements
 
