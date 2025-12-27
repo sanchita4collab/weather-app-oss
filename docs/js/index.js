@@ -10,10 +10,14 @@ const GEMINI_API_KEY = 'AIzaSyDSEQsmzemj8uunBkjGIn2ae5My8syJoZc';
 
 const STORAGE_KEYS = {
     themePreference: 'weatherApp.themePreference', // 'light' | 'dark' | 'auto'
+    lastWeather: 'weatherApp.lastWeather',
 };
 
 const searchBtn = document.getElementById('submit');
 const searchCity = document.getElementById('searchCity');
+const searchForm = document.querySelector('form');
+const offlineBanner = document.getElementById('offlineBanner');
+
 
 const themeToggleBtn = document.getElementById('themeToggle');
 
@@ -31,34 +35,47 @@ const WEATHER_BG_CLASSES = [
 const THEME_CLASSES = ['theme--light', 'theme--dark'];
 
 initTheme();
+initOfflineMode();
 
-searchBtn.addEventListener('click', async (event) => {
-    event.preventDefault();
-    const cityName = (searchCity.value || '').trim();
-    if (!cityName) {
-        alert('Please enter a city name.');
-        return;
-    }
-
-    try {
-        const url = `${API.baseUrl}?q=${encodeURIComponent(cityName)}&appid=${API.key}&units=metric`;
-        const response = await fetch(url);
-        const data = await response.json();
-
-        if (!response.ok) {
-            // OpenWeather sends { cod, message } on errors
-            alert(data.message || 'Failed to fetch weather.');
+if (searchForm) {
+    searchForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const cityName = (searchCity.value || '').trim();
+        if (!cityName) {
+            alert('Please enter a city name.');
             return;
         }
 
-        showReport(data);
-    } catch (err) {
-        alert('Network error. Please try again.');
-        console.error(err);
-    }
-});
+        try {
+            if (!navigator.onLine) {
+                showOfflineBanner(true);
+                const cached = getLastWeather();
+                if (cached) {
+                    showReport(cached);
+                    return;
+                }
+            }
+
+            const url = `${API.baseUrl}?q=${encodeURIComponent(cityName)}&appid=${API.key}&units=metric`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (!response.ok) {
+                // OpenWeather sends { cod, message } on errors
+                alert(data.message || 'Failed to fetch weather.');
+                return;
+            }
+
+            showReport(data);
+        } catch (err) {
+            alert('Network error. Please try again.');
+            console.error(err);
+        }
+    });
+}
 
 async function showReport(weatherData) {
+    try { cacheLastWeather(weatherData); } catch {}
     const cityElement = document.getElementById('city');
     cityElement.innerText = `${weatherData.name}, ${weatherData.sys?.country ?? ''}`.trim();
 
@@ -119,6 +136,10 @@ async function showReport(weatherData) {
             quoteElement.textContent = fallbackQuote;
         }
     }
+
+    // Visualizations
+    renderSunTimes(weatherData);
+    renderWind(weatherData);
 }
 
 function initTheme() {
@@ -438,3 +459,101 @@ function animateTemperature(el, target) {
         el.innerHTML = `${Math.round(target)} &deg;C`;
     }
 }
+
+// -------------------- Offline Mode --------------------
+function initOfflineMode(){
+    const handler = () => showOfflineBanner(!navigator.onLine);
+    window.addEventListener('online', handler);
+    window.addEventListener('offline', handler);
+    handler();
+
+    // On load, if offline, try to show cached data
+    if (!navigator.onLine) {
+        const cached = getLastWeather();
+        if (cached) showReport(cached);
+    }
+}
+
+function showOfflineBanner(show){
+    if (!offlineBanner) return;
+    offlineBanner.hidden = !show;
+}
+
+function cacheLastWeather(data){
+    localStorage.setItem(STORAGE_KEYS.lastWeather, JSON.stringify(data));
+}
+
+function getLastWeather(){
+    try {
+        const raw = localStorage.getItem(STORAGE_KEYS.lastWeather);
+        return raw ? JSON.parse(raw) : null;
+    } catch { return null; }
+}
+
+// (Recent & Favorite features removed per request)
+
+// -------------------- Sunrise / Sunset --------------------
+function renderSunTimes(weatherData){
+    const sunrise = weatherData?.sys?.sunrise; // unix UTC seconds
+    const sunset = weatherData?.sys?.sunset;   // unix UTC seconds
+    const tzOffset = weatherData?.timezone ?? 0; // seconds offset from UTC
+    const labelEl = document.getElementById('sunTimesLabel');
+    const remEl = document.getElementById('sunRemaining');
+    const ring = document.querySelector('.ring-progress');
+    const circumference = 2 * Math.PI * 54; // r=54
+
+    if (!(sunrise && sunset && ring && labelEl && remEl)) return;
+
+    const fmt = (secUtc) => {
+        const ms = (secUtc + tzOffset) * 1000;
+        const d = new Date(ms);
+        return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    };
+
+    labelEl.textContent = `${fmt(sunrise)} / ${fmt(sunset)}`;
+
+    const nowUtcSec = Math.floor(Date.now() / 1000);
+    const nowLocSec = nowUtcSec; // we add tzOffset below when comparing
+
+    const start = sunrise + 0; // local compared via offset
+    const end = sunset + 0;
+    const nowAdj = nowLocSec + tzOffset;
+
+    let frac = 0;
+    let remainingSec = 0;
+    if (nowAdj <= start) {
+        frac = 0;
+        remainingSec = start - nowAdj;
+    } else if (nowAdj >= end) {
+        frac = 0;
+        remainingSec = (start + 24 * 3600) - nowAdj; // until next sunrise roughly
+    } else {
+        frac = (nowAdj - start) / (end - start);
+        remainingSec = end - nowAdj;
+    }
+
+    frac = Math.max(0, Math.min(1, frac));
+    const offset = circumference * (1 - frac);
+    ring.style.strokeDasharray = `${circumference}`;
+    ring.style.strokeDashoffset = `${offset}`;
+
+    const hrs = Math.floor(remainingSec / 3600);
+    const mins = Math.floor((remainingSec % 3600) / 60);
+    remEl.textContent = `Time remaining: ${hrs}h ${mins}m`;
+}
+
+// -------------------- Wind Compass --------------------
+function renderWind(weatherData){
+    const deg = weatherData?.wind?.deg;
+    const speed = weatherData?.wind?.speed;
+    const arrow = document.getElementById('compassArrow');
+    const speedEl = document.getElementById('windSpeed');
+    const degEl = document.getElementById('windDeg');
+    if (speedEl) speedEl.textContent = (typeof speed === 'number') ? `${Math.round(speed)} m/s` : '-- m/s';
+    if (degEl) degEl.textContent = (typeof deg === 'number') ? `${Math.round(deg)}°` : '--°';
+    if (!arrow || typeof deg !== 'number') return;
+    arrow.style.transition = 'transform 600ms cubic-bezier(0.23, 1, 0.32, 1)';
+    arrow.style.transform = `translateX(-50%) rotate(${deg}deg)`;
+}
+
+// (Charts removed per request)
