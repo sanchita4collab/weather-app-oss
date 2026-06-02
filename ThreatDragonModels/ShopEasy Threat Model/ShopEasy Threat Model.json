@@ -864,6 +864,38 @@
         "cells": [
           {
             "position": {
+              "x": 139.99999999999977,
+              "y": 569
+            },
+            "size": {
+              "width": 860,
+              "height": 140
+            },
+            "attrs": {
+              "label": {
+                "text": "                                                \n\n\n\n\n\n\n                                                     Database Trust Boundary"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "83ca0e71-5faa-45ef-8033-b1ad38d13c11",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "                                                \n\n\n\n\n\n\n                                                     Database Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": [
+                "3b2cadcc-db4a-435e-b16c-08e73fd96dc2",
+                "844fc5e1-ead9-4aa0-b6f0-befb16b44d97",
+                "d0ad59a0-3c74-49e2-be9b-81e4535afe1a"
+              ]
+            }
+          },
+          {
+            "position": {
               "x": 50,
               "y": 90
             },
