@@ -257,7 +257,14 @@
             "children": [
               "568f4c06-2acb-4236-bfc7-fc11974e48d6",
               "fe9519bd-e9ae-4e58-91c0-1c2d6a15d2bb"
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
@@ -789,6 +796,11 @@
             },
             "tools": {
               "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
                 "boundary",
                 "button-remove",
                 "vertices",
