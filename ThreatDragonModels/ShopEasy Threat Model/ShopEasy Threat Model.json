@@ -33,8 +33,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "bf15a3b6-16cf-45cd-82cc-dd5109518ac0",
             "zIndex": -1,
+            "id": "bf15a3b6-16cf-45cd-82cc-dd5109518ac0",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "                                                                                 Internet Trust Boundary",
@@ -47,6 +47,43 @@
                 "b24d3847-44c7-47a3-8fae-24b5f8ec652b",
                 "16206fa0-44d2-4b7f-863f-bee754db9b18"
               ]
+            }
+          },
+          {
+            "position": {
+              "x": 375,
+              "y": -189.99999999999977
+            },
+            "size": {
+              "width": 460,
+              "height": 270
+            },
+            "attrs": {
+              "label": {
+                "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        \n        Internal Secure Network Boundary"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "e3b5081d-e6af-4a75-b3e3-d5bbb0c57eca",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        \n        Internal Secure Network Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": [
+                "b02ee1d1-6c0c-48a5-8698-c9c06b100e80"
+              ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
