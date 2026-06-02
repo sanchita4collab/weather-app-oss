@@ -2498,13 +2498,65 @@
             "id": "55a3f707-d8e1-465d-86b4-35ac0bac83ab",
             "source": {
               "x": 1010,
-              "y": 180
+              "y": 140
             },
             "target": {
               "x": 820,
-              "y": 180
+              "y": 140
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 24,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "e7e086af-e2ad-4ebb-8886-d7e8bb9d74f8",
+            "source": {
+              "x": 610,
+              "y": 170
+            },
+            "target": {
+              "x": 610,
+              "y": 340
+            },
+            "vertices": [
+              {
+                "x": 480,
+                "y": 320
+              }
+            ]
           }
         ],
         "description": "Data Flow Diagram"
