@@ -1840,6 +1840,53 @@
             "labels": [
               "Data Flow"
             ],
+            "id": "7b8cf3c8-cd89-4d96-9526-d2f2a4247fd0",
+            "source": {
+              "x": 50,
+              "y": 460
+            },
+            "target": {
+              "x": 50,
+              "y": 340
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
             "id": "544a268b-7785-45c0-af80-d4ad3c8650e0",
             "source": {
               "x": 330,
@@ -1892,14 +1939,14 @@
             "labels": [
               "Data Flow"
             ],
-            "id": "7b8cf3c8-cd89-4d96-9526-d2f2a4247fd0",
+            "id": "0cbc623a-558d-4942-b172-32a0815187f9",
             "source": {
-              "x": 46,
-              "y": 459
+              "x": 812,
+              "y": 490
             },
             "target": {
-              "x": 146,
-              "y": 559
+              "x": 912,
+              "y": 590
             }
           },
           {
