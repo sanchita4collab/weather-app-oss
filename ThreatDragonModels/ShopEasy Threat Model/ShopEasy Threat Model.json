@@ -878,8 +878,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "83ca0e71-5faa-45ef-8033-b1ad38d13c11",
             "zIndex": -1,
+            "id": "83ca0e71-5faa-45ef-8033-b1ad38d13c11",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "                                                \n\n\n\n\n\n\n                                                     Database Trust Boundary",
@@ -910,8 +910,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "df556c74-efd2-4de6-bdca-eaa754d6c739",
             "zIndex": -1,
+            "id": "df556c74-efd2-4de6-bdca-eaa754d6c739",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "                                                                     Internet Trust Boundary",
@@ -928,13 +928,6 @@
                 "8c81a28c-487c-4419-8b1f-776510640243",
                 "737e25ee-0e5c-43a1-9cb5-a7311cb0c297"
               ]
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -947,6 +940,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "E1\nCustomer"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -1041,7 +1037,7 @@
             "id": "e2501c6d-aba0-4433-9ec2-b3943c210d86",
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "E1\nCustomer",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -1061,6 +1057,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "E2\nAdmin"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -1155,7 +1154,7 @@
             "id": "01e317f1-e927-4b01-b196-fa163933b685",
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "E2\nAdmin",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
