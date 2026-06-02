@@ -19,11 +19,11 @@
         "cells": [
           {
             "position": {
-              "x": 20,
-              "y": -500
+              "x": 39.99999999999784,
+              "y": -499.9999999999945
             },
             "size": {
-              "width": 1170,
+              "width": 1110,
               "height": 300
             },
             "attrs": {
@@ -51,8 +51,8 @@
           },
           {
             "position": {
-              "x": 375,
-              "y": -189.99999999999977
+              "x": 350,
+              "y": -180
             },
             "size": {
               "width": 460,
@@ -65,8 +65,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "e3b5081d-e6af-4a75-b3e3-d5bbb0c57eca",
             "zIndex": -1,
+            "id": "e3b5081d-e6af-4a75-b3e3-d5bbb0c57eca",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n        \n        Internal Secure Network Boundary",
@@ -77,19 +77,12 @@
               "containedElements": [
                 "b02ee1d1-6c0c-48a5-8698-c9c06b100e80"
               ]
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
             "position": {
-              "x": 42.499999999999915,
-              "y": -385
+              "x": 122.49999999999991,
+              "y": -390
             },
             "size": {
               "width": 120,
@@ -330,8 +323,8 @@
           },
           {
             "position": {
-              "x": 1022.5,
-              "y": -380
+              "x": 952.5,
+              "y": -385
             },
             "size": {
               "width": 120,
@@ -731,58 +724,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Login/Browse/\nCheckout Requests",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Login/Browse/\nCheckout Requests"
-            ],
-            "id": "26f63d5c-9c8b-43d9-ac95-cf52a514de66",
-            "source": {
-              "x": 170,
-              "y": -250
-            },
-            "target": {
-              "x": 520,
-              "y": -250
-            },
-            "vertices": [
-              {
-                "x": 340,
-                "y": -250
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Product Data/Responses(HTTPS)",
               "description": "",
               "outOfScope": false,
@@ -853,10 +794,62 @@
               "y": -250
             },
             "target": {
-              "x": 1010,
+              "x": 940,
               "y": -250
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Login/Browse/\nCheckout Requests",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Login/Browse/\nCheckout Requests"
+            ],
+            "id": "26f63d5c-9c8b-43d9-ac95-cf52a514de66",
+            "source": {
+              "x": 250,
+              "y": -250
+            },
+            "target": {
+              "x": 520,
+              "y": -250
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": -250
+              }
+            ]
           }
         ],
         "description": "Data Flow Diagram"
