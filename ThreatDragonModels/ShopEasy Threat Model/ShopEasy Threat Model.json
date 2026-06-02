@@ -1174,6 +1174,9 @@
               "height": 120
             },
             "attrs": {
+              "text": {
+                "text": "P1\nAuthentication\nService"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -1268,7 +1271,7 @@
             "id": "8766c7fb-bd80-49e2-953c-3f8dc506085a",
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "P1\nAuthentication\nService",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2123,6 +2126,9 @@
               "height": 120
             },
             "attrs": {
+              "text": {
+                "text": "P2\nProduct Catalog\nService"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -2217,7 +2223,7 @@
             "id": "ea72165a-3621-4143-ba25-ffa7c6ca6d13",
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "P2\nProduct Catalog\nService",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2240,6 +2246,9 @@
               "height": 120
             },
             "attrs": {
+              "text": {
+                "text": "P5\nAdmin\nManagement\nService"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -2334,7 +2343,7 @@
             "id": "306062e7-2a54-4bd3-932e-d0d1bdf669b3",
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "P5\nAdmin\nManagement\nService",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2357,6 +2366,9 @@
               "height": 120
             },
             "attrs": {
+              "text": {
+                "text": "P3\nCart & Checkout\nService"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -2451,7 +2463,7 @@
             "id": "8c81a28c-487c-4419-8b1f-776510640243",
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "P3\nCart & Checkout\nService",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2474,6 +2486,9 @@
               "height": 120
             },
             "attrs": {
+              "text": {
+                "text": "P4\nPayment\nService"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -2568,7 +2583,7 @@
             "id": "737e25ee-0e5c-43a1-9cb5-a7311cb0c297",
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "P4\nPayment\nService",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2579,6 +2594,13 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
