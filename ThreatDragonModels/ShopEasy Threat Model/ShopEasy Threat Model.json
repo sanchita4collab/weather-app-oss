@@ -896,6 +896,49 @@
           },
           {
             "position": {
+              "x": 29.99999999999784,
+              "y": 10.000000000008981
+            },
+            "size": {
+              "width": 1150,
+              "height": 500
+            },
+            "attrs": {
+              "label": {
+                "text": "                                                                     Internet Trust Boundary"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "df556c74-efd2-4de6-bdca-eaa754d6c739",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "                                                                     Internet Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": [
+                "e2501c6d-aba0-4433-9ec2-b3943c210d86",
+                "01e317f1-e927-4b01-b196-fa163933b685",
+                "8766c7fb-bd80-49e2-953c-3f8dc506085a",
+                "ea72165a-3621-4143-ba25-ffa7c6ca6d13",
+                "306062e7-2a54-4bd3-932e-d0d1bdf669b3",
+                "8c81a28c-487c-4419-8b1f-776510640243",
+                "737e25ee-0e5c-43a1-9cb5-a7311cb0c297"
+              ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
+          },
+          {
+            "position": {
               "x": 50,
               "y": 90
             },
