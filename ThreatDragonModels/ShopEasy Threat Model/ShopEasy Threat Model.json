@@ -1713,7 +1713,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Login/\nRegister",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1727,7 +1727,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Login/\nRegister"
             ],
             "id": "b2ca0b9d-5005-4987-af6b-d2007f16a8c8",
             "source": {
