@@ -928,15 +928,6 @@
                 "8c81a28c-487c-4419-8b1f-776510640243",
                 "737e25ee-0e5c-43a1-9cb5-a7311cb0c297"
               ]
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1676,7 +1667,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Admin Login\n(HTTPS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1690,7 +1681,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Admin Login\n(HTTPS)"
             ],
             "id": "d66a5a26-8c6b-4a57-afc8-f216286322cc",
             "source": {
@@ -2698,13 +2689,6 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
