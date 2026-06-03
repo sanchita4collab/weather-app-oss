@@ -1691,7 +1691,8 @@
             "target": {
               "x": 1020,
               "y": 100
-            }
+            },
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -2764,7 +2765,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Operation\nResult",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2778,7 +2779,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Operation\nResult"
             ],
             "id": "c11928e3-6c58-4bb9-985a-dc8bd4be10c2",
             "source": {
