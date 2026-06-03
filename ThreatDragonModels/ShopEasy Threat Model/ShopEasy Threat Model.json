@@ -928,6 +928,13 @@
                 "8c81a28c-487c-4419-8b1f-776510640243",
                 "737e25ee-0e5c-43a1-9cb5-a7311cb0c297"
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
