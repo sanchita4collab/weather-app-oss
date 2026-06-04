@@ -896,8 +896,8 @@
           },
           {
             "position": {
-              "x": 30,
-              "y": 20
+              "x": -100,
+              "y": 50
             },
             "size": {
               "width": 1150,
@@ -921,13 +921,19 @@
               "crossingFlows": [],
               "containedElements": [
                 "e2501c6d-aba0-4433-9ec2-b3943c210d86",
-                "01e317f1-e927-4b01-b196-fa163933b685",
                 "8766c7fb-bd80-49e2-953c-3f8dc506085a",
                 "ea72165a-3621-4143-ba25-ffa7c6ca6d13",
                 "306062e7-2a54-4bd3-932e-d0d1bdf669b3",
                 "8c81a28c-487c-4419-8b1f-776510640243",
                 "737e25ee-0e5c-43a1-9cb5-a7311cb0c297"
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -2805,7 +2811,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Manage Products/\nUsers/Orders",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2819,7 +2825,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Manage Products/\nUsers/Orders"
             ],
             "id": "55a3f707-d8e1-465d-86b4-35ac0bac83ab",
             "source": {
