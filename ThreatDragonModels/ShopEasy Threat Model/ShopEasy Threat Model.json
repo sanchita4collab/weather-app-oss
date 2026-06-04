@@ -2793,7 +2793,7 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
+                  "name": "block"
                 },
                 "strokeDasharray": null
               }
@@ -2804,13 +2804,13 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Manage Products/\nUsers/Orders",
+              "name": "Manage Products/\nUsers/Orders/\nAdmin Response",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
+              "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
@@ -2818,7 +2818,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Manage Products/\nUsers/Orders"
+              "Manage Products/\nUsers/Orders/\nAdmin Response"
             ],
             "id": "55a3f707-d8e1-465d-86b4-35ac0bac83ab",
             "source": {
