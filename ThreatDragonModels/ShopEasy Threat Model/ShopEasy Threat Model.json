@@ -2042,7 +2042,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Add to Cart/\nPlace order\n(HTTPS)",
+              "name": "Browse/Search Products/\nAdd to Cart/\nPlace order\n(HTTPS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2056,7 +2056,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Add to Cart/\nPlace order\n(HTTPS)"
+              "Browse/Search Products/\nAdd to Cart/\nPlace order\n(HTTPS)"
             ],
             "id": "b2c1d59f-f20d-4be2-b48a-b9040d63eb83",
             "source": {
@@ -2209,58 +2209,6 @@
               "y": 780
             },
             "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Payment \nStatus",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Payment \nStatus"
-            ],
-            "id": "15e1d34b-2794-4fa4-bb03-a418312ede03",
-            "source": {
-              "x": 770,
-              "y": 780
-            },
-            "target": {
-              "x": 770,
-              "y": 700
-            },
-            "vertices": [
-              {
-                "x": 770,
-                "y": 740
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -3038,53 +2986,6 @@
             "vertices": []
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 27,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Browse \nProducts",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Browse \nProducts"
-            ],
-            "id": "b48088b4-d88f-4f14-a6b5-128a19de0760",
-            "source": {
-              "x": 300,
-              "y": 140
-            },
-            "target": {
-              "x": 170,
-              "y": 140
-            },
-            "vertices": []
-          },
-          {
             "position": {
               "x": 707,
               "y": 780
@@ -3095,7 +2996,7 @@
             },
             "attrs": {
               "text": {
-                "text": "E3\nPayment\nGateway"
+                "text": "E3\nPayment\nGatew"
               },
               "body": {
                 "stroke": "#333333",
@@ -3203,6 +3104,58 @@
               "privilegeLevel": "",
               "threats": []
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 29,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment \nStatus",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Payment \nStatus"
+            ],
+            "id": "15e1d34b-2794-4fa4-bb03-a418312ede03",
+            "source": {
+              "x": 770,
+              "y": 760
+            },
+            "target": {
+              "x": 770,
+              "y": 690
+            },
+            "vertices": [
+              {
+                "x": 770,
+                "y": 720
+              }
+            ]
           }
         ],
         "description": "Data Flow Diagram"
