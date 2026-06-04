@@ -927,13 +927,6 @@
                 "8c81a28c-487c-4419-8b1f-776510640243",
                 "737e25ee-0e5c-43a1-9cb5-a7311cb0c297"
               ]
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1783,53 +1776,6 @@
             "labels": [
               "Data Flow"
             ],
-            "id": "f6a22f7f-31de-413a-a8a6-672e3b10b0c9",
-            "source": {
-              "x": 670,
-              "y": 440
-            },
-            "target": {
-              "x": 430,
-              "y": 440
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
             "id": "4385e292-b49c-48ae-bb5b-ae4fa9d86a91",
             "source": {
               "x": 440,
@@ -2167,6 +2113,53 @@
             "target": {
               "x": 110,
               "y": 190
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment Status/\nConfirmation",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Payment Status/\nConfirmation"
+            ],
+            "id": "f6a22f7f-31de-413a-a8a6-672e3b10b0c9",
+            "source": {
+              "x": 670,
+              "y": 440
+            },
+            "target": {
+              "x": 430,
+              "y": 440
             },
             "vertices": []
           },
